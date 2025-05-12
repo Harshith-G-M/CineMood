@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineMood - Find Movies for Your Mood</title>
+    <link rel="stylesheet" href="cine.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                    <line x1="7" y1="2" x2="7" y2="22"></line>
+                    <line x1="17" y1="2" x2="17" y2="22"></line>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <line x1="2" y1="7" x2="7" y2="7"></line>
+                    <line x1="2" y1="17" x2="7" y2="17"></line>
+                    <line x1="17" y1="17" x2="22" y2="17"></line>
+                    <line x1="17" y1="7" x2="22" y2="7"></line>
+                </svg>
+            </div>
+            <h1>CineMood</h1>
+            <p>Find the perfect movie based on your emotions</p>
+        </header>
+
+        <div class="main-content">
+            <section class="mood-section">
+                <h2>How are you feeling today?</h2>
+                <div class="mood-selector" id="moodSelector">
+                    <!-- Mood emojis will be generated here by JavaScript -->
+                </div>
+            </section>
+
+            <div class="mood-description" id="moodDescription"></div>
+
+            <div class="loader" id="loader">
+                <div class="spinner"></div> 
+                <p>Finding the perfect movies...</p>
+            </div>
+
+            <section class="movies-section">
+                <div class="movies-container" id="moviesContainer">
+                    <div class="no-movies">Select your mood to discover movies</div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Modal for related movies -->
+        <div id="movieModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <div class="modal-header">
+                    <h2 id="modalMovieTitle"></h2>
+                    <div id="modalMovieMeta"></div>
+                </div>
+                <div class="modal-body">
+                    <div id="modalMovieDetails"></div>
+                    <div class="related-movies-section">
+                        <h3>Related Movies</h3>
+                        <div id="relatedMoviesContainer" class="related-movies-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 CineMood - Your Emotional Movie Guide</p>
+    </footer>
+
+    <script src="cine.js"></script>
+</body>
+</html>
